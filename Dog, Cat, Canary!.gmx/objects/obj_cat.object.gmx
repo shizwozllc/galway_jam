@@ -8,6 +8,34 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Initialize Variables
+grav = 0.2;
+hsp = 0;
+vsp = 0;
+jumpspeed = 7.5;
+movespeed = 10;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -27,6 +55,7 @@
             <kind>1</kind>
             <string>///Movement
 
+/*
 //Alarm Event for Jump
 alarm_set(1, 45);
 
@@ -56,7 +85,7 @@ else if keyboard_check(vk_space)
     
     }
 }
-*/
+
 
 switch (keyboard_key)
 {
@@ -79,31 +108,70 @@ switch (keyboard_key)
 
 while place_meeting (x, y, obj_invWall) y+=1 ;
 
+*/
 
+
+
+
+//Get the player's input
+key_right = keyboard_check(ord("D"));
+key_left = -keyboard_check(ord("A"));
+key_jump = keyboard_check_pressed(vk_space);
+ 
+//React to inputs
+move = key_left + key_right;
+hsp = move * movespeed;
+if (vsp &lt; 10) vsp += grav;
+ 
+if (place_meeting(x,y+1,obj_invWall))
+{
+    vsp = key_jump * -jumpspeed
+}
+ 
+//Horizontal Collision
+if (place_meeting(x+hsp,y,obj_invWall))
+{
+    while(!place_meeting(x+sign(hsp),y,obj_invWall))
+    {
+        x += sign(hsp);
+    }
+    hsp = 0;
+}
+x += hsp;
+ 
+//Vertical Collision
+if (place_meeting(x,y+vsp,obj_invWall))
+{
+    while(!place_meeting(x,y+sign(vsp),obj_invWall))
+    {
+        y += sign(vsp);
+    }
+    vsp = 0;
+}
+y += vsp;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_invWall">
+    <event eventtype="4" ename="obj_canary">
       <action>
         <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
+        <id>224</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_another_room</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>1</kind>
-            <string>vspeed = 0;
-</string>
+            <kind>11</kind>
+            <room>rm_win</room>
           </argument>
         </arguments>
       </action>

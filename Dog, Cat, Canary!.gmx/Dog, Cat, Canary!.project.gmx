@@ -16,6 +16,8 @@
     </sprites>
     <sprites name="Objects">
       <sprite>sprites\spr_invWall</sprite>
+      <sprite>sprites\spr_win</sprite>
+      <sprite>sprites\spr_lose</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background"/>
@@ -23,6 +25,8 @@
   <objects name="objects">
     <objects name="Objects">
       <object>objects\obj_invWall</object>
+      <object>objects\obj_win</object>
+      <object>objects\obj_lose</object>
     </objects>
     <objects name="Characters">
       <object>objects\obj_cat</object>
@@ -32,6 +36,8 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
+    <room>rooms\rm_win</room>
+    <room>rooms\rm_lose</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
