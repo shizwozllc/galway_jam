@@ -10,6 +10,7 @@
     <sprite>sprites\spr_dog</sprite>
     <sprite>sprites\spr_canary</sprite>
     <sprite>sprites\spr_invWall</sprite>
+    <sprite>sprites\spr_spiderweb</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
