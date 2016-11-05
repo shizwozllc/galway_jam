@@ -20,13 +20,17 @@
       <sprite>sprites\spr_lose</sprite>
     </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_splash1</background>
+    <background>background\bg_splash2</background>
+  </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
     <objects name="Objects">
       <object>objects\obj_invWall</object>
       <object>objects\obj_win</object>
       <object>objects\obj_lose</object>
+      <object>objects\obj_fade</object>
     </objects>
     <objects name="Characters">
       <object>objects\obj_cat</object>
@@ -35,9 +39,15 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_preSplash</room>
+    <room>rooms\rm_splashOne</room>
+    <room>rooms\rm_splashTwo</room>
+    <room>rooms\rm_menu</room>
     <room>rooms\rm_main</room>
     <room>rooms\rm_win</room>
     <room>rooms\rm_lose</room>
+    <room>rooms\rm_controls</room>
+    <room>rooms\rm_credit</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
