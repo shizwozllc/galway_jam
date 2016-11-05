@@ -28,6 +28,7 @@
             <string>//this is the creation code for the dog object 
 
 direction = 0; 
+speed = 5;
 
 alarm_set(0, 90);
 </string>
