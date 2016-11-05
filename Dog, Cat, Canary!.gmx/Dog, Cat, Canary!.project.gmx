@@ -6,14 +6,30 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_cat</sprite>
-    <sprite>sprites\spr_dog</sprite>
-    <sprite>sprites\spr_canary</sprite>
-    <sprite>sprites\spr_invWall</sprite>
-    <sprite>sprites\spr_spiderweb</sprite>
+    <sprites name="Inside">
+      <sprite>sprites\spr_spiderweb</sprite>
+    </sprites>
+    <sprites name="Characters">
+      <sprite>sprites\spr_cat</sprite>
+      <sprite>sprites\spr_canary</sprite>
+      <sprite>sprites\spr_dog</sprite>
+    </sprites>
+    <sprites name="Objects">
+      <sprite>sprites\spr_invWall</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <objects name="objects">
+    <objects name="Characters">
+      <object>objects\obj_cat</object>
+      <object>objects\obj_dog</object>
+      <object>objects\obj_canary</object>
+    </objects>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_main</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
