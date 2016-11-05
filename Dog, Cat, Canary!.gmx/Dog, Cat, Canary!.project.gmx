@@ -35,6 +35,7 @@
       <object>objects\obj_lose</object>
       <object>objects\obj_fade</object>
       <object>objects\obj_presplash</object>
+      <object>objects\obj_music</object>
     </objects>
     <objects name="Characters">
       <object>objects\obj_cat</object>
