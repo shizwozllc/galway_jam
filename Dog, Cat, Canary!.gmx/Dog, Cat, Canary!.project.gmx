@@ -21,6 +21,9 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <objects name="objects">
+    <objects name="Objects">
+      <object>objects\obj_invWall</object>
+    </objects>
     <objects name="Characters">
       <object>objects\obj_cat</object>
       <object>objects\obj_dog</object>
