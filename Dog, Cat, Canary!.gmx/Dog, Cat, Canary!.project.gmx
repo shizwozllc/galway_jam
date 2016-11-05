@@ -30,7 +30,6 @@
       <object>objects\obj_invWall</object>
       <object>objects\obj_win</object>
       <object>objects\obj_lose</object>
-      <object>objects\obj_musicHandler</object>
     </objects>
     <objects name="Characters">
       <object>objects\obj_cat</object>
