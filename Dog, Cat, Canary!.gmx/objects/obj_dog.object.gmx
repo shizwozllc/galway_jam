@@ -56,10 +56,12 @@ alarm_set(0, 90);
             <string>if (direction == 0)
 {
     direction = 180;
+    image_xscale = -1;
 }
 else 
 {
     direction = 0;
+    image_xscale = 1;
 }
 
 alarm_set(0, 90);

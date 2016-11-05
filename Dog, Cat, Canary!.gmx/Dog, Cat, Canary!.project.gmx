@@ -22,6 +22,7 @@
       <sprite>sprites\spr_win</sprite>
       <sprite>sprites\spr_lose</sprite>
     </sprites>
+    <sprite>sprites\spr_start</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_splash1</background>
@@ -36,6 +37,8 @@
       <object>objects\obj_fade</object>
       <object>objects\obj_presplash</object>
       <object>objects\obj_music</object>
+      <object>objects\obj_start</object>
+      <object>objects\obj_esc</object>
     </objects>
     <objects name="Characters">
       <object>objects\obj_cat</object>
