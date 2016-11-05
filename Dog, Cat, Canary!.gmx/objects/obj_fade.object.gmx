@@ -3,11 +3,209 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-100</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
-  <events/>
+  <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>fadeIn = true;
+alpha = 1;
+alarm[0] = room_speed * 0.05;
+clock = 125; //Time you want the black screen to stay on
+titleScreen = false;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (titleScreen = false)
+{
+        if(fadeIn = false)
+        {
+            if (alpha &lt; 1)
+            {
+                alpha += 0.035;
+                alarm[1] = room_speed * 0.05;
+            }
+            else
+            {
+                alpha = 1;
+                if(room == rm_splash)
+                {
+                    room_goto_next();
+                }
+                else
+                {
+                    alarm_set(2, 60);
+                    room_goto(rm_menu);
+                }  
+            }
+        }
+} 
+else 
+{
+    instance_destroy();
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (fadeIn == true)
+{
+    if ( alpha &gt; 0)
+    {
+        alpha -= 0.035;
+        alarm[0] = room_speed * 0.05;
+    }
+    else
+    {
+        alpha = 0;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>clock -= 1; //This subtracts 1 from the clock
+if (clock == 0) 
+{
+    fadeIn = false;
+    alarm[1] = room_speed * 0.05;
+}
+else if (keyboard_check_pressed(vk_space))
+{
+    fadeIn = false;
+    alarm[1] = room_speed * 0.05;
+}
+else if (device_mouse_check_button_pressed(0, mb_left))
+{
+    fadeIn = false;
+    alarm[1] = room_speed * 0.05;
+}
+
+if (room == rm_menu)
+{
+    titleScreen = true;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_set_color(c_black);
+draw_set_alpha(alpha);
+
+draw_rectangle(0, 0, room_width, room_height, false);
+
+draw_set_alpha(1);
+
+/*
+draw_set_font(-1);
+if(alpha &gt; 0.5)
+{
+    draw_set_color(c_white);
+}
+else
+{
+    draw_set_color(c_black);
+}
+draw_set_halign(fa_center);
+draw_set_valign(fa_middle);
+draw_text(room_width/2, 50, "Alpha = " + string(alpha));
+*/
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+  </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>
   <PhysicsObjectShape>0</PhysicsObjectShape>

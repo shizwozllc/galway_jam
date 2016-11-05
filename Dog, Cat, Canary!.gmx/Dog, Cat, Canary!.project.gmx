@@ -31,6 +31,7 @@
       <object>objects\obj_win</object>
       <object>objects\obj_lose</object>
       <object>objects\obj_fade</object>
+      <object>objects\obj_presplash</object>
     </objects>
     <objects name="Characters">
       <object>objects\obj_cat</object>
@@ -38,10 +39,13 @@
       <object>objects\obj_canary</object>
     </objects>
   </objects>
+  <timelines name="timelines">
+    <timeline>timelines\tm_presplash</timeline>
+  </timelines>
   <rooms name="rooms">
     <room>rooms\rm_preSplash</room>
-    <room>rooms\rm_splashOne</room>
-    <room>rooms\rm_splashTwo</room>
+    <room>rooms\rm_splash</room>
+    <room>rooms\rm_splash2</room>
     <room>rooms\rm_menu</room>
     <room>rooms\rm_main</room>
     <room>rooms\rm_win</room>
