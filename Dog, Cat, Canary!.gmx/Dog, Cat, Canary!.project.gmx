@@ -7,6 +7,7 @@
   <sounds name="sound">
     <sound>sound\snd_menu</sound>
     <sound>sound\snd_mainGame</sound>
+    <sound>sound\snd_realMenu</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Inside">
@@ -24,6 +25,8 @@
       <sprite>sprites\spr_lose</sprite>
       <sprite>sprites\spr_start</sprite>
       <sprite>sprites\spr_life</sprite>
+      <sprite>sprites\spr_credits</sprite>
+      <sprite>sprites\spr_quit</sprite>
     </sprites>
     <sprites name="World">
       <sprite>sprites\spr_grass</sprite>
@@ -40,6 +43,7 @@
   <backgrounds name="background">
     <background>background\bg_splash1</background>
     <background>background\bg_splash2</background>
+    <background>background\br_menu</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
@@ -54,6 +58,8 @@
       <object>objects\obj_esc</object>
       <object>objects\obj_chat</object>
       <object>objects\obj_lifeSystem</object>
+      <object>objects\obj_credits</object>
+      <object>objects\obj_quit</object>
     </objects>
     <objects name="Characters">
       <object>objects\obj_cat</object>
@@ -69,6 +75,7 @@
       <object>objects\obj_wall</object>
       <object>objects\obj_floor</object>
       <object>objects\obj_attic</object>
+      <object>objects\obj_wallpaper2</object>
     </objects>
   </objects>
   <timelines name="timelines">
