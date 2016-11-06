@@ -13,9 +13,10 @@
       <sprite>sprites\spr_spiderweb</sprite>
     </sprites>
     <sprites name="Characters">
-      <sprite>sprites\spr_cat</sprite>
+      <sprite>sprites\spr_catStill</sprite>
       <sprite>sprites\spr_canary</sprite>
       <sprite>sprites\spr_dog</sprite>
+      <sprite>sprites\spr_catMoving</sprite>
     </sprites>
     <sprites name="Objects">
       <sprite>sprites\spr_invWall</sprite>
@@ -23,6 +24,17 @@
       <sprite>sprites\spr_lose</sprite>
       <sprite>sprites\spr_start</sprite>
       <sprite>sprites\spr_life</sprite>
+    </sprites>
+    <sprites name="World">
+      <sprite>sprites\spr_grass</sprite>
+      <sprite>sprites\spr_dirt</sprite>
+      <sprite>sprites\spr_flowers</sprite>
+      <sprite>sprites\spr_woodRings</sprite>
+      <sprite>sprites\spr_wallpaper1</sprite>
+      <sprite>sprites\spr_wallpaper2</sprite>
+      <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_floor</sprite>
+      <sprite>sprites\spr_attic</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -47,6 +59,16 @@
       <object>objects\obj_cat</object>
       <object>objects\obj_dog</object>
       <object>objects\obj_canary</object>
+    </objects>
+    <objects name="World">
+      <object>objects\obj_dirt</object>
+      <object>objects\obj_grass</object>
+      <object>objects\obj_flowers</object>
+      <object>objects\obj_wallpaper</object>
+      <object>objects\obj_wood</object>
+      <object>objects\obj_wall</object>
+      <object>objects\obj_floor</object>
+      <object>objects\obj_attic</object>
     </objects>
   </objects>
   <timelines name="timelines">
