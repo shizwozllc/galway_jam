@@ -21,8 +21,9 @@
       <sprite>sprites\spr_invWall</sprite>
       <sprite>sprites\spr_win</sprite>
       <sprite>sprites\spr_lose</sprite>
+      <sprite>sprites\spr_start</sprite>
+      <sprite>sprites\spr_life</sprite>
     </sprites>
-    <sprite>sprites\spr_start</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_splash1</background>
@@ -39,6 +40,8 @@
       <object>objects\obj_music</object>
       <object>objects\obj_start</object>
       <object>objects\obj_esc</object>
+      <object>objects\obj_chat</object>
+      <object>objects\obj_lifeSystem</object>
     </objects>
     <objects name="Characters">
       <object>objects\obj_cat</object>
